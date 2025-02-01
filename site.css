@@ -8,3 +8,15 @@ body {
     justify-content: center;
     border-radius: 8%;
 }
+
+.clock {
+    background-color: violet;
+}
+
+.alarms {
+    background-color: crimson;
+}
+
+.songs {
+    background-color: navy;
+}
