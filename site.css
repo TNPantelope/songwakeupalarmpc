@@ -4,19 +4,59 @@ body {
 }
 
 .container {
-    background-color: rgb(87, 87, 87);
-    justify-content: center;
-    border-radius: 8%;
+    
+    display: grid;
+    gap: 2rem;
+    padding: 5rem;
 }
 
 .clock {
-    background-color: violet;
+    grid-column: 1;
+    
+    font-family: sans-serif;
+    font-size: 25rem;
+    font-weight: bold;
+    color: rgb(199, 175, 175);
+
+    margin-left: 12rem;
+    margin-top: 3rem;
+}
+
+.meridiem {
+    font-size: 5rem;  
+    position: relative;
+    bottom: -3rem;   
+    left: -2rem;      
+    color: rgb(199, 175, 175);
+    font-weight: normal;  
 }
 
 .alarms {
-    background-color: crimson;
+    grid-column: 1;
+    grid-row: 2;
+
+    margin-left: 3rem;
+    margin-bottom: 3rem;
 }
 
 .songs {
-    background-color: navy;
+    grid-column: 2;
+
+    margin-right: 0rem;
+    margin-top: 8rem;
 }
+
+
+.alarm-selector-btn {
+    background-color: rgb(199, 175, 175);
+    width: 10rem;
+    height: 2rem;
+    margin: 1rem;
+    border-radius: 8rem;
+    border: none;
+}
+
+.alarm-selector-btn:hover {
+    background-color: rgb(180, 159, 159);
+}
+
