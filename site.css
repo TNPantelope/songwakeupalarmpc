@@ -17,6 +17,9 @@ body {
         linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
         rgb(0, 0, 0);
     background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px, auto;
+
+    font-family: sans-serif;
+    color: rgb(199, 175, 175);
 }
 
 .container {
@@ -34,7 +37,7 @@ body {
 .clock {
     grid-column: 1;
     
-    font-family: sans-serif;
+    
     font-size: 25rem;
     font-weight: bold;
     color: rgb(199, 175, 175);
@@ -69,8 +72,6 @@ body {
 }
 
 .alarmInfoText {
-
-    color: white;
 }
 
 .activeAlarms {
@@ -100,7 +101,7 @@ body {
     grid-column: 1 / span 2;
     /*justify-self: center;*/
     
-    background-color: rgb(167, 167, 167);
+    background-color: rgb(199, 175, 175);
     width: 80%;
     height: 5rem;
     
@@ -156,7 +157,7 @@ body {
 
 
 .add-song-button {
-    background-color: rgb(167, 167, 167);
+    background-color: rgb(199, 175, 175);
     width: 100%;
     height: 5rem;
 
