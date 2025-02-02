@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="site.css">
     <title>Alarm clock</title>
 </head>
+
 <body>
     <div class="container">
 
@@ -14,33 +16,53 @@
         <script>
             updateTime();
         </script>
+
         <!--alarm container-->
         <div class="alarms">
-            <h1> Hello alarms</h1>
+
+
+            <div class="activeAlarms">
+                <span class="alarmInfoText">Active alarm:</span>
+            </div>
+
+            <div class="willRingIn">
+                <span class="alarmInfoText">Will ring in:</span>
+            </div>
+
+
+            <div class="savedAlarms">
+                saved alarms
+            </div>
+
+            <button class="addAlarm">
+                add alarm
+            </button>
+
         </div>
 
         <!--song container-->
         <div class="songs">
             <div class="alarm-selector">
-                <button class="alarm-selector-btn">One Song</button>
-                <button class="alarm-selector-btn">Randomize selected</button>
-                <button class="alarm-selector-btn">Randomize all</button>
+                <button class="alarm-selector-btn" id="oneSong">One Song</button>
+                <button class="alarm-selector-btn" id="randomizeSelected">Randomize selected</button>
+                <button class="alarm-selector-btn" id="randomizeAll">Randomize all</button>
             </div>
 
-            <div class="song-list"> 
-
+            <div class="songList">
+                <h1>hi</h1>
             </div>
 
-            <div class="add-song">
-                <label for="file-upload" class="add-song-button">
-                    + Add Song
-                    <input type="file" id="file-upload" accept="audio/*" style="display: none;">
-                </label>
-            </div>
+
+            <button class="add-song-button" onclick="document.getElementById('file-upload').click()">
+                + Add Song
+                <input type="file" id="file-upload" accept="audio/*" style="display: none;">
+            </button>
+
         </div>
     </div>
-    
 
-    <script src="site.js"></script> 
+
+    <script src="site.js"></script>
 </body>
+
 </html>
