@@ -1,6 +1,6 @@
 
-
-let clock = document.querySelector('.clock')
+// The clock
+let clock = document.querySelector('.clock');
 function updateTime() {
     let currentTime = new Date();
     let timeString = currentTime.toLocaleTimeString('en-US', {
@@ -16,3 +16,14 @@ function updateTime() {
     setTimeout(updateTime, 1000);
 }
 updateTime();
+
+// Song manage system
+
+let songs = [];
+
+function storeMp3File() {
+    let songInput = document.getElementById('mp3-upload');
+    console.log(songInput);
+
+
+}
