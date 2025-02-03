@@ -71,21 +71,21 @@ body {
     border: none;
 }
 
-.alarmInfoText {
+.alarm-info-text {
 }
 
-.activeAlarms {
+.active-alarms {
     margin-top: -5rem;
     grid-column: 1;
 }
 
-.willRingIn {
+.will-ring-in {
     margin-top: -5rem;
     grid-column: 2;
    
 }
 
-.savedAlarms {
+.saved-alarms {
     grid-column: 1 / span 2;
 
     display: flex;
@@ -97,7 +97,7 @@ body {
     
 }
 
-.addAlarm {
+.add-alarm-btn {
     grid-column: 1 / span 2;
     /*justify-self: center;*/
     
@@ -106,9 +106,13 @@ body {
     height: 5rem;
     
     border-radius: 8rem;
-    border: dashed;
-    border-color: rgb(83, 83, 83);
+    border: none;
+  
     
+}
+
+.add-alarm-btn:hover {
+    background-color: rgb(180, 159, 159);
 }
 
 
@@ -143,6 +147,8 @@ body {
     border: none;
 }
 
+
+
 .alarm-selector-btn:hover {
     background-color: rgb(180, 159, 159);
 }
@@ -162,7 +168,11 @@ body {
     height: 5rem;
 
     border-radius: 8rem;
-    border: dashed;
-    border-color: rgb(83, 83, 83);
+    border: none;
+  
+}
+
+.add-song-button:hover {
+    background-color: rgb(180, 159, 159);
 }
 
