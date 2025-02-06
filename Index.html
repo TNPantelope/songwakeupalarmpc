@@ -13,9 +13,7 @@
 
         <!--clock container-->
         <div class="clock">00:00:00 </div>
-        <script>
-            updateTime();
-        </script>
+        
 
         <!--alarm container-->
         <div class="alarms">
@@ -49,12 +47,12 @@
             </div>
 
             <div class="song-list">
-                <h1>hi</h1>
+               
             </div>
 
-            <button class="add-song-btn" onclick="document.getElementById('mp3-upload').click()">
+            <button method="post" class="add-song-btn" onclick="document.getElementById('audio-upload').click()">
                 + Add Song
-                <input type="file" id="mp3-upload" accept="audio/*" style="display: none;">
+                <input type="file" id="audio-upload" accept="audio/*" style="display: none;">
             </button>
         </div>
     </div>

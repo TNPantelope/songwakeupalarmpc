@@ -20,10 +20,35 @@ updateTime();
 // Song manage system
 
 let songs = [];
+let i = 0;
 
-function storeMp3File() {
-    let songInput = document.getElementById('mp3-upload');
-    console.log(songInput);
+let audioUpload = document.querySelector('#audio-upload');
 
+
+function songSystem() {
+    audioUpload.addEventListener("change", storeSongs);
+}
+
+function storeSongs() {
+    let file = audioUpload.files[0];  
+
+    if (!file) return;
+
+    songs[i] = URL.createObjectURL(file);
+    localStorage.setItem("songs", JSON.stringify(songs));
+    console.log(songs[i]);
+    i++;
 
 }
+
+function displaySongs() {
+    let j = 0;
+
+    while (j < i ) {
+    console.log(songs[j])
+    j++;
+    }
+}
+
+songSystem();
+//displaySongs();
