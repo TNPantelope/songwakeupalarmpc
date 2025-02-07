@@ -20,7 +20,10 @@ updateTime();
 // Song manage system
 
 let songs = [];
+let songNames = [];
+
 let i = 0;
+
 
 let audioUpload = document.querySelector('#audio-upload');
 
@@ -31,24 +34,47 @@ function songSystem() {
 
 function storeSongs() {
     let file = audioUpload.files[0];  
-
     if (!file) return;
 
+    
     songs[i] = URL.createObjectURL(file);
+    songNames[i] = file.name;
+
+    songNames[i] = songNames[i].slice(0, -4);
+
     localStorage.setItem("songs", JSON.stringify(songs));
+    localStorage.setItem("songNames", JSON.stringify(songNames));
+
+
+
     console.log(songs[i]);
+    console.log(songNames[i]);
     i++;
 
+    displaySongs();
 }
 
 function displaySongs() {
+    let songList = document.querySelector('.song-list'); 
+    
+    songList.innerHTML = '';
+    
     let j = 0;
-
-    while (j < i ) {
-    console.log(songs[j])
-    j++;
+    while (j < i) {
+        
+        let songDiv = document.createElement('div');
+        songDiv.className = 'song-item'; 
+        
+        
+        songDiv.innerHTML = `
+            <span>${songNames[j]}</span>
+            <audio src="${songs[j]}" controls></audio>
+        `;
+        
+        
+        songList.appendChild(songDiv);
+        j++;
     }
 }
 
 songSystem();
-//displaySongs();
