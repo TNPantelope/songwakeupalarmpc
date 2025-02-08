@@ -32,11 +32,24 @@
                 List of saved alarms
             </div>
 
-            <button class="add-alarm-btn">
-                add alarm
+            <button class="add-alarm-btn" onclick="alarmPopupFn(), backgroundBtnPopupFn()">
+                + Add alarm
             </button>
+            
 
         </div>
+
+        <!-- the popup with the alarm set and stuff alalat -->
+        <div class="setAlarmBox" id="setAlarmPopup" style="display: none">
+            <div class="insidePupup">
+                sadf
+            </div>
+        </div>
+
+        <!-- background button pupup -->
+        <button class="setAlarmBackground" id="setAlarmBackground" style="display: none" onclick="alarmClosePopupFn()">
+            
+        </button>
 
         <!--song container-->
         <div class="songs">

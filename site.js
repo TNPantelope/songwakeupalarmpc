@@ -17,7 +17,7 @@ function updateTime() {
 }
 updateTime();
 
-// Song manage system
+// Song managing system
 
 let songs = [];
 let songNames = [];
@@ -39,7 +39,6 @@ function storeSongs() {
     
     songs[i] = URL.createObjectURL(file);
     songNames[i] = file.name;
-
     songNames[i] = songNames[i].slice(0, -4);
 
     localStorage.setItem("songs", JSON.stringify(songs));
@@ -78,3 +77,21 @@ function displaySongs() {
 }
 
 songSystem();
+
+// alarm managing system
+
+let alarms = [];
+let alarmTimes = [];
+
+function alarmPopupFn() {
+    document.getElementById("setAlarmPopup").style.display = "block";
+}
+
+function backgroundBtnPopupFn() {
+    document.getElementById("setAlarmBackground").style.display = "block";
+}
+
+function alarmClosePopupFn() {
+    document.getElementById("setAlarmPopup").style.display = "none";
+    document.getElementById("setAlarmBackground").style.display = "none";
+}
