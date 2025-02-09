@@ -95,3 +95,11 @@ function alarmClosePopupFn() {
     document.getElementById("setAlarmPopup").style.display = "none";
     document.getElementById("setAlarmBackground").style.display = "none";
 }
+
+// set alarm input default value to current time
+let now = new Date();
+let hours = now.getHours().toString().padStart(2, '0');
+let minutes = now.getMinutes().toString().padStart(2, '0');
+let currentTime = `${hours}:${minutes}`;
+
+document.querySelector('#alarmTime').value = currentTime;
