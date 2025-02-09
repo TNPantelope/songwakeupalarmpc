@@ -13,7 +13,7 @@
 
         <!--clock container-->
         <div class="clock">00:00:00 </div>
-        
+
 
         <!--alarm container-->
         <div class="alarms">
@@ -28,6 +28,7 @@
             </div>
 
 
+
             <div class="saved-alarms">
                 List of saved alarms
             </div>
@@ -35,20 +36,36 @@
             <button class="add-alarm-btn" onclick="alarmPopupFn(), backgroundBtnPopupFn()">
                 + Add alarm
             </button>
-            
+
 
         </div>
 
         <!-- the popup with the alarm set and stuff alalat -->
         <div class="setAlarmBox" id="setAlarmPopup" style="display: none">
-            <div class="insidePupup">
-                sadf
+            
+
+            <div class="alarmTimeContainer">
+                <input type="time" class="alarmTime" id="alarmTime">
+                
             </div>
+
+
+            <div class="setAlarmBtns">
+                <button class="saveAlarm">
+                    Save
+                </button>
+
+                <button class="discardAlarm">
+                    Discard
+                </button>
+            </div>
+
+
         </div>
 
         <!-- background button pupup -->
         <button class="setAlarmBackground" id="setAlarmBackground" style="display: none" onclick="alarmClosePopupFn()">
-            
+
         </button>
 
         <!--song container-->
@@ -60,7 +77,7 @@
             </div>
 
             <div class="song-list">
-               
+
             </div>
 
             <button method="post" class="add-song-btn" onclick="document.getElementById('audio-upload').click()">
@@ -71,4 +88,5 @@
     </div>
     <script src="site.js"></script>
 </body>
+
 </html>

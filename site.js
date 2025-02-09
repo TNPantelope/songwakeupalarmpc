@@ -84,7 +84,7 @@ let alarms = [];
 let alarmTimes = [];
 
 function alarmPopupFn() {
-    document.getElementById("setAlarmPopup").style.display = "block";
+    document.getElementById("setAlarmPopup").style.display = "flex";
 }
 
 function backgroundBtnPopupFn() {
