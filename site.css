@@ -329,6 +329,12 @@ input[type=time] {
   
 }
 
+.saveAlarm:hover {
+    background-color: rgb(163, 142, 142);
+    color: rgb(66, 53, 53);
+}
+
 .discardAlarm:hover {
-    background-color: rgba(126, 13, 13, 0.219);
+    color: rgb(83, 11, 11);
+    background-color: rgba(56, 16, 16, 0);
 }

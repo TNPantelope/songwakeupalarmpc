@@ -79,10 +79,6 @@ function displaySongs() {
 songSystem();
 
 // alarm managing system
-
-let alarms = [];
-let alarmTimes = [];
-
 function alarmPopupFn() {
     document.getElementById("setAlarmPopup").style.display = "flex";
 }
@@ -103,3 +99,50 @@ let minutes = now.getMinutes().toString().padStart(2, '0');
 let currentTime = `${hours}:${minutes}`;
 
 document.querySelector('#alarmTime').value = currentTime;
+
+
+// store and display alarms
+let alarms = []; 
+let alarmTime = document.getElementById('alarmTime');
+
+let k = 0;
+
+alarmTime.addEventListener("input", function(e) {
+});
+
+function alarmSystem() {
+    let alarm = alarmTime.value;  
+    if (!alarm) return;
+   
+    alarms[k] = alarm;
+    localStorage.setItem("alarms", JSON.stringify(alarms));
+    
+    console.log(alarms[k]);
+
+    k++;
+    alarmClosePopupFn();
+    displayAlarms();
+}
+
+
+function displayAlarms() {
+    let alarmList = document.querySelector('.saved-alarms'); 
+    alarmList.innerHTML = '';
+
+    let j = 0;
+    while (j < k) {
+        
+        let alarmDiv = document.createElement('div');
+        alarmDiv.className = 'alarm-item'; 
+        
+        
+        alarmDiv.innerHTML = `
+            <span>${alarms[j]}</span>
+
+        `;
+        
+        alarmList.appendChild(alarmDiv);
+        j++;
+    }
+}
+
