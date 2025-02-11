@@ -60,11 +60,13 @@ body {
     margin-left: 5rem;
     margin-bottom: 0rem;
     padding: 1rem;
+    /*
     border: dashed;
     border-color: rgb(255, 255, 255);
     border-radius: 3rem;
 
     background-color: rgba(155, 126, 126, 0.205);
+    */
 }
 
 .active-alarms {
@@ -102,8 +104,12 @@ body {
     flex-direction: column;
     justify-content: center;
     height: 20rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+
+  
+    overflow-y: scroll;
+    scrollbar-width: 0;
 }
 
 .add-alarm-btn {
@@ -119,6 +125,14 @@ body {
     background-color: rgb(180, 159, 159);
 }
 
+
+
+.alarm-item {
+    margin-left: 3rem;
+    font-size: 3rem;
+    font-weight: bold;
+    
+}
 
 
 /* Song column */
@@ -163,6 +177,7 @@ body {
     margin-bottom: 1rem;
 
     overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .add-song-btn {
@@ -338,3 +353,83 @@ input[type=time] {
     color: rgb(83, 11, 11);
     background-color: rgba(56, 16, 16, 0);
 }
+
+
+
+/* the switches */
+
+ /* The switch - the box around the slider */
+ .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    
+    
+  }
+
+  #alarmSwitch {
+    vertical-align: middle;
+    margin-bottom: 0.5rem;
+    margin-left: 40rem; 
+
+  }
+
+  #songSwitch {
+   
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider {
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    border-radius: 50%;
+  } 

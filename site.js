@@ -68,6 +68,11 @@ function displaySongs() {
         songDiv.innerHTML = `
             <span>${songNames[j]}</span>
             <audio src="${songs[j]}" controls></audio>
+            <label class="switch" id="songSwitch">
+                <input type="checkbox" id=>
+                <span class="slider"></span>
+            </label>
+            <br/>
         `;
         
         
@@ -131,13 +136,31 @@ function displayAlarms() {
 
     let j = 0;
     while (j < k) {
+
+        let [hours, minutes] = alarms[j].split(':');
+        let date = new Date();
+        date.setHours(hours);
+        date.setMinutes(minutes);
+        
+       
+        let timeString = date.toLocaleTimeString('en-US', { 
+            hour: 'numeric', 
+            minute: '2-digit', 
+            hour12: true 
+        });
         
         let alarmDiv = document.createElement('div');
         alarmDiv.className = 'alarm-item'; 
         
         
         alarmDiv.innerHTML = `
-            <span>${alarms[j]}</span>
+            <br/>
+            <div>${timeString}</span>
+            <label class="switch" id="alarmSwitch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+            <br/>
 
         `;
         
