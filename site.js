@@ -66,8 +66,8 @@ function displaySongs() {
         
         
         songDiv.innerHTML = `
-            <span>${songNames[j]}</span>
-            <audio src="${songs[j]}" controls></audio>
+            <span class="songNameDiv">${songNames[j]}</span>
+            <audio class="audioControls" src="${songs[j]}" controls></audio>
             <label class="switch" id="songSwitch">
                 <input type="checkbox" id=>
                 <span class="slider"></span>

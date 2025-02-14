@@ -227,6 +227,16 @@ audio {
     background-color: rgb(180, 159, 159);
 }
 
+.songNameDiv {
+    width: 40%;
+
+}
+
+.audioControls {
+    width: 40%;
+
+}
+
 
 /* The alarm popup */
 
@@ -376,7 +386,7 @@ input[type=time] {
   }
 
   #songSwitch {
-   
+    margin-left: 3.5rem;
   }
   
   /* Hide default HTML checkbox */
